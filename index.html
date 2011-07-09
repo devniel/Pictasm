@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Pictasm</title>
+<link type="text/css" rel="stylesheet" href="style.css"/>
+<link href='http://fonts.googleapis.com/css?family=Geo&v1' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Nobile&v1' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Play&v1' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Metrophobic&v1' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/pictasm.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/pictasm_paint.js"></script>
+</head>
+<body>
+<div id="container">
+	
+    <div id="header"><strong><span style="color:#690">Pictasm</span></strong> | Pega o dibuja tu sprite y obtiene el código assembler
+    <p id="status"></p>
+    </div>
+    
+    <div id="tabs">
+        <ul>
+            <li id="tab_picture">Imagen</li>
+            <li id="tab_paint">Pintar</li>
+        </ul>
+    </div>
+    
+    <div id="view">
+    	<!-- View - Picture -->
+    	<div id="view_picture">
+			<div id="sprite_name" style="width:100%;margin-top:-10px;margin-bottom:5px">
+			Nombre de rutina : <input name="name_routine" type="text"/>
+			</div>
+            <div id="user">
+            	<div id="dropboxer">
+            		<div id="dropbox_bg"></div>
+                	<div id="dropbox">Arrastra tu sprite aquí</div>
+                </div>
+                <div id="coordinates">
+                    <div id="inputs">
+                        <input type="text" name="posx" maxlength="3" placeholder="Posición X : 0"/>
+                        <input type="text" name="posy" maxlength="3" placeholder="Posición Y : 0"/>
+                    </div>
+                    <button id="pictasm">PicTasm</button>
+                </div>
+            </div>
+            
+            <div id="result">
+                <div id="asm">
+                </div>
+                <div id="lines">
+                </div>
+				
+				<div id="dataSprite">
+				</div>
+            </div>
+			
+			<div id="notes">
+				<h3 style="margin-bottom:-8px">Recomendaciones</h3>
+				<p>-Actualización : Ahora hay 2 versiones, la clásica y la avanzada (arreglo de datos).<br/>
+				- Usar imágenes , recomendable de 32x32, que tengan los colores del modo 13h.<br/>
+				- Para editar sus imágenes, usen esta <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/4/49/VGA_palette.svg/512px-VGA_palette.svg.png">paleta</a><br/>
+				- Hay un error de sobreflujo al exceder 26000 líneas.<br/>
+				- Video de ejemplo : <a href="http://www.screenr.com/I0Ns">http://www.screenr.com/I0Ns</a></br>
+				</p>
+			</div>
+			
+			<div class="corte" style="clear:both"></div>
+        </div>
+        <!-- View - Paint -->
+        <div id="view_paint">
+        	<div id="container_paint_and_options">
+                <div id="container_paint">
+                    <canvas id="paper" width="200" height="200">
+                    </canvas>
+                </div>
+                <div id="paint_options">
+                	<button id="pictasm_paint" style="margin-right:5px">Pictasm!</button>
+                    
+                    <input name="pictasm_bg" type="checkbox" id="pictasm_bg" value="Fondo negro"/>
+                    <label for="pictasm_bg" style="font-size:10px;margin-top:-10px">Fondo negro</label>
+                    <button id="eraser"></button>
+                </div>
+            </div>
+            
+            <div id="options">
+                <canvas id="colors" width="257" height="257">
+                </canvas>
+            </div>
+        </div>
+		<div class="corte" style="clear:both"></div>
+    </div>
+    
+    <canvas id="board" width="150" height="150">
+   		Tu navegador no soporta HTML5
+	</canvas>
+    
+    <div id="footer">
+    	<div id="fb-root"></div>
+		<script src="http://connect.facebook.net/en_US/all.js#appId=113537252069650&amp;xfbml=1"></script>
+    	<fb:like href="http://stendev.com/pictasm/" send="true" width="450" show_faces="true" font=""></fb:like>
+       	<div id="author">Daniel Flores, <strong>again</strong>.</div>
+    </div>
+	
+	<div class="corte" style="clear:both"></div>
+	
+</div>
+
+</body>
+</html>

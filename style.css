@@ -1,0 +1,332 @@
+@charset "utf-8";
+*{
+	font-family:Play;
+}
+/*------------------------
+	CONTAINER
+	----------------------*/
+#container {
+	width:500px;
+	height:auto;
+	margin:0 auto;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-310px;
+	margin-left:-250px;
+}
+
+/*------------------------
+	HEADER
+	----------------------*/
+#header {
+	width:100%;
+	height:auto;
+	border-bottom:1px solid #CCC;
+	margin-bottom:20px;
+	font-size:17px;	
+}
+
+/*-------------------------
+	TABS
+	----------------------*/
+#tabs {
+	width:100%;
+	height:30px;
+	float:left;
+	border-bottom:1px solid #CCC;
+	margin-bottom:20px;
+}
+
+#tabs ul {
+	list-style:none;
+	float:left;
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+#tabs ul li{
+	float:left;
+	margin-right:10px;
+	padding:9px;
+	background:#F3F3F3;
+	border-top-right-radius:5px;
+	border-top-left-radius:5px;
+	font-size:11px;
+}
+
+#tabs ul li:hover {
+	cursor:pointer;
+	background:#999;
+}
+
+/*------------------------
+	VIEW
+	-----------------------*/
+#view {
+	width:100%;
+	position:relative;
+	height:460px;
+	float:left;
+}
+
+/*------------------------
+	VIEW PICTURE
+	----------------------*/
+	
+#view_picture {
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+#notes {
+	width:100%;
+	float:left;
+	font-size:12px
+	}
+
+/*------------------------
+	USER
+	----------------------*/
+#user {
+	width:150px;
+	height:auto;
+	float:left;
+}
+
+/*------------------------
+	USER - DROPBOX
+	----------------------*/
+#user #dropboxer {
+	position:relative;
+}
+
+#user #dropbox {
+	border:2px dashed #CCC;
+	width: 150px;
+	height: 150px;
+	margin:5px auto;
+	line-height:150px;
+	text-align:center;
+	font-size:12px;
+	position:relative;
+	background:transparent;
+	position:relative;
+	z-index:2;
+}
+	
+#user #dropbox:hover {
+	border:3px dashed #333;
+}
+
+#user #dropbox_bg {
+	width:50px;
+	height:50px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-25px;
+	margin-left:-25px;
+	background:transparent;
+	z-index:1;
+}
+
+/*------------------------
+	USER - COORDINATES
+	----------------------*/
+#user #coordinates {
+	width:150px;
+}
+
+#user #coordinates #inputs{
+	width:90px;
+	float:left
+}
+
+#user #coordinates #inputs input {
+	width:70px;
+	border:1px solid #CCC;
+	padding:5px;
+	float:left;
+	font-size:10px;
+	margin-top:5px;
+}
+
+#user #coordinates #pictasm, #pictasm_paint {
+	width:60px;
+	height:60px;
+	border:1px solid #CCC;
+	padding:5px;
+	float:left;
+	border-radius:5px;
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.41, rgb(240,240,240)),
+		color-stop(0.71, rgb(236,237,228))
+	);
+	
+	background-image: -moz-linear-gradient(
+		center bottom,
+		rgb(240,240,240) 41%,
+		rgb(236,237,228) 71%
+	);
+	
+	cursor:pointer;
+}
+
+#user #coordinates #pictasm:hover , #pictasm_paint:hover {
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(1, rgb(240,240,240)),
+		color-stop(0, rgb(199,199,199))
+	);
+	background-image: -moz-linear-gradient(
+		center bottom,
+		rgb(240,240,240) 100%,
+		rgb(199,199,199) 0%
+	);
+}
+
+#user #coordinates #pictasm:active , #pictasm_paint:active{
+	background:#CCC;
+}
+	
+/*------------------------
+	CANVAS
+	----------------------*/
+	
+#board {
+	display:none;
+}
+
+/*------------------------
+	ASM - CODE
+	----------------------*/
+	
+#result {
+	width:300px;
+	float:left;
+	margin-left:20px;
+}
+
+#result #asm {
+	border:1px solid #CCC;
+	width:280px;
+	height:180px;
+	float:left;
+	overflow:auto;
+	padding:10px;	
+}
+
+#result #lines {
+	font-size:12px;
+	float:left;
+	margin-top:5px;
+	color:#999
+}
+
+#result #dataSprite {
+	border:1px solid #CCC;
+	width:280px;
+	height:100px;
+	float:left;
+	overflow:auto;
+	padding:10px;
+	margin-top:10px;
+}
+
+/*------------------------
+	FOOTER
+	----------------------*/
+	
+#footer {
+	width:100%;
+	height:30px;
+	float:left;
+	margin-top:10px;
+	border-top:1px solid #CCC;
+	padding-top:10px;
+	font-size:11px;
+	position:relative;
+}
+
+#footer #author {
+	width:110px;
+	position:absolute;
+	right:0;
+	top:13px;
+}
+
+/*--------------------------------
+	PAINT
+	------------------------------*/
+#view_paint {
+	width:100%;
+	float:left;
+	position:absolute;
+	top:0;
+	left:0;
+	display:none;
+}
+
+#container_paint_and_options {
+    position:relative;
+    width:200px;
+    height:300px;
+	float:left;
+}
+
+#container_paint {
+    position:relative;
+    width:200px;
+    height:200px;
+	float:left;
+	margin-bottom:10px;
+	background:#F5F5F5
+}
+
+#paper {
+    border:1px solid #CCC;
+    position:relative;
+	cursor:url(img/cursors/pencil.png), auto;
+	user-select: none;
+   -o-user-select:none;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+}
+
+/* Eraser */
+#eraser {
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(img/cursors/eraser.png) no-repeat center;	
+}
+
+#colors tr td{
+    border:1px solid #CCC;
+    width:20px;
+    height:20px;
+}
+
+#options {
+    position:relative;
+    width:257px;
+    height:257px;
+	float:left;
+	margin-left:20px;
+}
+
+#colors {
+	position:relative;
+	cursor:pointer
+}
