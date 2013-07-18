@@ -13,7 +13,15 @@
 <script type="text/javascript" src="js/pictasm_paint.js"></script>
 </head>
 <body>
-<!-- HOLA SOY CARLOS -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=488188324566886";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div id="container">
 	
     <div id="header"><strong><span style="color:#690">Pictasm</span></strong> | Pega o dibuja tu sprite y obtiene el código assembler
@@ -59,7 +67,7 @@
 			
 			<div id="notes">
 				<h3 style="margin-bottom:-8px">Recomendaciones</h3>
-				<p>-Actualización : Ahora hay 2 versiones, la clásica y la avanzada (arreglo de datos).<br/>
+				<p>-Actualizac: Ahora hay 2 versiones, la clásica y la avanzada (arreglo de datos).<br/>
 				- Usar imágenes , recomendable de 32x32, que tengan los colores del modo 13h.<br/>
 				- Para editar sus imágenes, usen esta <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/4/49/VGA_palette.svg/512px-VGA_palette.svg.png">paleta</a><br/>
 				- Hay un error de sobreflujo al exceder 26000 líneas.<br/>
@@ -98,9 +106,7 @@
 	</canvas>
     
     <div id="footer">
-    	<div id="fb-root"></div>
-		<script src="http://connect.facebook.net/en_US/all.js#appId=113537252069650&amp;xfbml=1"></script>
-    	<fb:like href="http://stendev.com/pictasm/" send="true" width="450" show_faces="true" font=""></fb:like>
+    	<div class="fb-like" data-href="http://devniel.com/labs/Pictasm/" data-send="true" data-width="450" data-show-faces="true"></div>
        	<div id="author">Daniel Flores, <strong>again</strong>.</div>
     </div>
 	
